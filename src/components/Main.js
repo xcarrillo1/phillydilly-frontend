@@ -42,16 +42,30 @@ export default function Main(props) {
     getPost();
   }
 
+  const deletePost = async id => {
+    // make delete request to delete posts
+    await fetch(URL + id, {
+      method:"DELETE"
+    });
+    // update list of posts
+    getPost();
+  }
+
+  useEffect(() => getPost(), []);
+
   return (
       <main>
         <Switch>
           <Route exact path="/">
-            <Index/>
+            <Index post={post} createPost={createPost}/>
           </Route>
           <Route
             path="/post/:id"
             render={(rp) => (
               <Show
+                post={post}
+                updatePost={updatePost}
+                deletePost={deletePost}
                 {...rp}
               />
             )}
