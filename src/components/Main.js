@@ -28,7 +28,20 @@ export default function Main(props) {
     // update list of posts
     getPost();
   };
-  
+
+  const updatePost = async (posting, id) => {
+    // make put request to create posts
+    await fetch(URL + id, {
+      method:"PUT",
+      headers: {
+        "Content-Type": "Application/json",
+      },
+      body: JSON.stringify(posting),
+    });
+    // update list of posts
+    getPost();
+  }
+
   return (
       <main>
         <Switch>
