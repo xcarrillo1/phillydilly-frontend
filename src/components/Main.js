@@ -1,76 +1,70 @@
-import {useEffect, useState} from "react";
-import {Route, Switch} from "react-router-dom";
-import Index from "../pages/Index.js"
-import Show from "../pages/Show.js";
+import { useEffect, useState } from "react";
+import { Route, Switch } from "react-router-dom";
+import Index from "../pages/Index";
+import Show from "../pages/Show";
 
-export default function Main(props) {
-  // set state to null
-  const [post, setPost] = useState(null);
+function Main(props) {
+    const [post, setPost] = useState(null);
 
-  // link to backend
-  const URL = "http://localhost:4000/post/";
+    const URL = "http://localhost:4000/post/";
 
-  const getPost = async () => {
-    const response = await fetch(URL);
-    const data = await response.json();
-    setPost(data);
-  };
+    const getPost = async () => {
+        const response = await fetch(URL);
+        const data = await response.json();
+        setPost(data);
+    };
 
-  const createPost = async (posting) => {
-    // make post request to create people
-    await fetch(URL, {
-      method:"POST",
-      headers: {
-        "Content-Type": "Application/json",
-      },
-      body: JSON.stringify(posting),
-    });
-    // update list of posts
-    getPost();
-  };
+    const createPost = async (post) => {
+        await fetch(URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "Application/json",
+            },
+            body: JSON.stringify(post),
+        });
+        getPost();
+    };
 
-  const updatePost = async (posting, id) => {
-    // make put request to create posts
-    await fetch(URL + id, {
-      method:"PUT",
-      headers: {
-        "Content-Type": "Application/json",
-      },
-      body: JSON.stringify(posting),
-    });
-    // update list of posts
-    getPost();
-  }
+    const updatePost = async (post, id) => {
+        await fetch(URL + id, { 
+            method: "PUT" , 
+            headers: {
+                "Content-Type": "Application/json", 
+            },
+            body: JSON.stringify(post),
+        });
+        getPost();
+    }
 
-  const deletePost = async id => {
-    // make delete request to delete posts
-    await fetch(URL + id, {
-      method:"DELETE"
-    });
-    // update list of posts
-    getPost();
-  }
+    const deletePost = async id => {
+        await fetch(URL + id, { 
+            method: "DELETE", 
+        })
+        getPost();
+    }
 
-  useEffect(() => getPost(), []);
+    useEffect(() => getPost(), []);
 
-  return (
-      <main>
-        <Switch>
-          <Route exact path="/">
-            <Index post={post} createPost={createPost}/>
-          </Route>
-          <Route
-            path="/post/:id"
-            render={(rp) => (
-              <Show
-                post={post}
-                updatePost={updatePost}
-                deletePost={deletePost}
-                {...rp}
-              />
-            )}
-          />
-        </Switch>
-      </main>
+    return (
+        <main>
+            <Switch>
+                <Route exact path="/">
+                    <Index post={post} createPost={createPost} />
+                </Route>
+                <Route
+                    path="/post/:id"
+                    render={(rp) => (
+                        <Show
+                            post={post}
+                            updatePost={updatePost}
+                            deletePost={deletePost}
+                            {...rp}
+                        />
+                    )}
+                />
+            </Switch>
+        </main>
     );
-};
+}
+
+export default Main;

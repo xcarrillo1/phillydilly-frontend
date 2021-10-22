@@ -1,21 +1,19 @@
-import {useState} from "react";
-import {Link} from "react-router-dom"
+import { useState } from "react";
+import { Link } from "react-router-dom"
 
-export default function Index(props) {
-    // state to hold formData
+function Index(props) {
+
     const [newForm, setNewForm] = useState({
         title: "",
         author: "",
         image: "",
         text: "",
     });
-    
-    //handleChange function for form
+
     const handleChange = (event) => {
-        setNewForm({...newForm, [event.target.name]: event.target.value});
+        setNewForm({ ...newForm, [event.target.title]: event.target.value });
     };
 
-    // handleSubmit function for form
     const handleSubmit = (event) => {
         event.preventDefault();
         props.createPost(newForm);
@@ -26,4 +24,56 @@ export default function Index(props) {
             text: "",
         });
     };
+    const loaded = () => {
+        return props.post.map((post) => (
+            <div key={post._id} className="post">
+                <Link to={`/post/${post._id}`}><h1>{post.title}</h1></Link>
+                <img src={post.image} alt={post.title} />
+                <h3>{post.team}</h3>
+            </div>
+        ));
+    };
+
+    const loading = () => {
+        return <h1>Loading...</h1>;
+    };
+
+    return (
+        <section>
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    value={newForm.title}
+                    name="title"
+                    placeholder="title"
+                    onChange={handleChange}
+                />
+                <input
+                    type="text"
+                    value={newForm.author}
+                    name="author"
+                    placeholder="author"
+                    onChange={handleChange}
+                />
+                <input
+                    type="text"
+                    value={newForm.image}
+                    name="image"
+                    placeholder="image URL"
+                    onChange={handleChange}
+                />
+                <input
+                    type="text"
+                    value={newForm.text}
+                    name="text"
+                    placeholder="text"
+                    onChange={handleChange}
+                />
+                <input type="submit" value="Create Post" />
+            </form>
+            {props.post ? loaded() : loading()}
+        </section>
+    );
 }
+
+export default Index;
