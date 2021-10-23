@@ -11,7 +11,7 @@ function Index(props) {
     });
 
     const handleChange = (event) => {
-        setNewForm({ ...newForm, [event.target.title]: event.target.value });
+        setNewForm({ ...newForm, [event.target.name]: event.target.value });
     };
 
     const handleSubmit = (event) => {
@@ -29,7 +29,7 @@ function Index(props) {
             <div key={post._id} className="post">
                 <Link to={`/post/${post._id}`}><h1>{post.title}</h1></Link>
                 <img src={post.image} alt={post.title} />
-                <h3>{post.team}</h3>
+                <h3>{post.text}</h3>
             </div>
         ));
     };

@@ -8,7 +8,7 @@ function Show(props) {
     const [editForm, setEditForm] = useState(posting);
 
     const handleChange = event => {
-        setEditForm({ ...editForm, [event.target.title]: event.target.value });
+        setEditForm({ ...editForm, [event.target.name]: event.target.value });
     }
 
     const handleSubmit = event => {

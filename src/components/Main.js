@@ -6,7 +6,7 @@ import Show from "../pages/Show";
 function Main(props) {
     const [post, setPost] = useState(null);
 
-    const URL = "http://localhost:4000/post/";
+    const URL = "https://phillydilly.herokuapp.com/post/";
 
     const getPost = async () => {
         const response = await fetch(URL);
