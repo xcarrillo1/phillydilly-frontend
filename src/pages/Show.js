@@ -24,9 +24,9 @@ function Show(props) {
 
     return (
         <div className="posting">
-            <h1>{posting.title}</h1>
-            <h2>{posting.author}</h2>
             <img src={posting.image} alt={posting.title} />
+            <h1 className="title">{posting.title}</h1>
+            By:<h2 className="author">{posting.author}</h2>
             <p>{posting.text}</p>
             <br/>
             <button id="delete" onClick={removePosting}>
@@ -61,7 +61,7 @@ function Show(props) {
                     placeholder="text"
                     onChange={handleChange}
                 />
-                <input type="submit" value="Update Post" />
+                <input className="update" type="submit" value="Update Post" />
             </form>
         </div>
     )

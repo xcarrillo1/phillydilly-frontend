@@ -1,26 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
 * {
   box-sizing: border-box;
+  background-color: seagreen;
+  cursor: url("https://i.imgur.com/CEwB8ux.png"), auto;
 }
 
 .App {
   text-align: center;
 }
 
+/* Header.js */
+.nav {
+  font-family: "Nunito", sans-serif;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Sub.js */
 .sub {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  border: 2px solid #004953; 
-}
-
-.nav a {
-  text-decoration: none;
+  border: 2px solid black; 
 }
 
 .sub a {
   text-decoration: none;
+  color: white;
+}
+
+/* Index.js */
+.post {
+  opacity:0.5;
+  transition: 1s ease;
+}
+
+.post:hover {
+  opacity:1;
+  transition: 1s ease;
 }
 
 img {
@@ -29,4 +54,33 @@ img {
   height: 275px;
   margin: 10px;
   object-fit: cover;
+}
+
+/* Show.js */
+.title, .author {
+  font-family: "Poppins", sans-serif;
+}
+
+#delete {
+  background-color: red;
+  color: black;
+}
+
+.update {
+  background-color: black;
+  color: white;
+}
+
+/* About.js */
+.about img {
+  border-radius: 25px;
+  width: 850px;
+  height: 275px;
+  margin: 10px;
+  object-fit: fill;
+}
+
+/* Footer */
+.footer {
+  color: white;
 }
