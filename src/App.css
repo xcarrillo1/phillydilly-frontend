@@ -15,6 +15,14 @@
   border: 2px solid #004953; 
 }
 
+.nav a {
+  text-decoration: none;
+}
+
+.sub a {
+  text-decoration: none;
+}
+
 img {
   border-radius: 25px;
   width: 850px;

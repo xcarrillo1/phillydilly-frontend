@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Index from "../pages/Index";
 import Show from "../pages/Show";
 import Add from "../pages/Add";
+import About from "../pages/About";
 
 function Main(props) {
     const [post, setPost] = useState(null);
@@ -66,6 +67,9 @@ function Main(props) {
                         />
                     )}
                 />
+                <Route path="/about">
+                     <About />   
+                </Route>
             </Switch>
         </main>
     );
