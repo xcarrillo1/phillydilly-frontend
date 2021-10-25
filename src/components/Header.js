@@ -6,12 +6,6 @@ function Header(props){
             <Link to ="/">
                 <div>PhillyDilly</div>
             </Link>
-            <Link to ="/about">
-                <div>About</div>
-            </Link>
-            <Link to="/create">
-                <div>Create New Post</div>
-            </Link>
         </nav>
     )
 }
