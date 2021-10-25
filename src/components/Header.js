@@ -9,6 +9,9 @@ function Header(props){
             <Link to ="/about">
                 <div>About</div>
             </Link>
+            <Link to="/create">
+                <div>Create New Post</div>
+            </Link>
         </nav>
     )
 }

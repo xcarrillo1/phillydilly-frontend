@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Index from "../pages/Index";
 import Show from "../pages/Show";
+import Add from "../pages/Add";
 
 function Main(props) {
     const [post, setPost] = useState(null);
@@ -50,6 +51,9 @@ function Main(props) {
             <Switch>
                 <Route exact path="/">
                     <Index post={post} createPost={createPost} />
+                </Route>
+                <Route path="/create">
+                    <Add post={post} createPost={createPost} />
                 </Route>
                 <Route
                     path="/post/:id"
