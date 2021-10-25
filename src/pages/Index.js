@@ -27,9 +27,7 @@ function Index(props) {
     const loaded = () => {
         return props.post.map((post) => (
             <div key={post._id} className="post">
-                <Link to={`/post/${post._id}`}><h1>{post.title}</h1></Link>
-                <img src={post.image} alt={post.title} />
-                <h3>{post.text}</h3>
+                <Link to={`/post/${post._id}`}><img src={post.image} alt={post.title} /></Link>
             </div>
         ));
     };

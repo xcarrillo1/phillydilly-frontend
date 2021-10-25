@@ -27,6 +27,8 @@ function Show(props) {
             <h1>{posting.title}</h1>
             <h2>{posting.author}</h2>
             <img src={posting.image} alt={posting.title} />
+            <p>{posting.text}</p>
+            <br/>
             <button id="delete" onClick={removePosting}>
                 DELETE
             </button>
