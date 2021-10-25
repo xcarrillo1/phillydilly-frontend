@@ -6,6 +6,9 @@ function Header(props){
             <Link to ="/">
                 <div>PhillyDilly</div>
             </Link>
+            <Link to ="/about">
+                <div>About</div>
+            </Link>
         </nav>
     )
 }
