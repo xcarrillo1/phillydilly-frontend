@@ -23,7 +23,7 @@ function Add(props) {
     };
 
     return (
-        <section>
+        <section className="container-new">
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
@@ -46,7 +46,7 @@ function Add(props) {
                     placeholder="Image URL"
                     onChange={handleChange}
                 />
-                <input
+                <textarea
                     type="text"
                     value={newForm.text}
                     name="text"

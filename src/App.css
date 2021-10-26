@@ -40,9 +40,6 @@
   font-size: 20px;
 }
 
-.sub a:hover {
-  background-color: blue;
-}
 
 /* Index.js */
 .post {
@@ -74,17 +71,53 @@ img {
 }
 
 .update {
-  background-color: black;
+  background-color: yellowgreen;
   color: white;
 }
 
 /* Add.js */
 .create {
-  background-color: black;
+  background-color: yellowgreen;
   color: white;
+  font-family: "Poppins", sans-serif;
 }
+
+.container-new {
+  width: 50vw;
+  height: 58vh;
+  margin: 50px auto;
+  display: flex;
+  border-radius: 10px;
+  /* box-shadow: 1px 1px 10px #ddd,
+              -1px -1px 10px #ddd,
+              1px -1px 10px #ddd,
+              -1px 1px 10px #ddd; */
+  justify-content: center;
+}
+
+.container-new input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid;
+  border-radius: 5px;
+  resize: none;
+  height: 100px;
+}
+
 ::placeholder {
   color: white;
+  font-family: "Poppins", sans-serif;
 }
 
 /* About.js */
