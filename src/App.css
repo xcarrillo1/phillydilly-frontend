@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Nunito:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 * {
   box-sizing: border-box;
@@ -61,7 +60,8 @@ img {
 
 /* Show.js */
 .title, .author {
-  font-family: "Poppins", sans-serif;
+  font-family: "Black Ops One", sans-serif;
+  color: white
 }
 
 #delete {

@@ -26,7 +26,7 @@ function Show(props) {
         <div className="posting">
             <img src={posting.image} alt={posting.title} />
             <h1 className="title">{posting.title}</h1>
-            By:<h2 className="author">{posting.author}</h2>
+            <h2 className="author">By: {posting.author}</h2>
             <p>{posting.text}</p>
             <br/>
             <h3>_____________________________________________</h3>
