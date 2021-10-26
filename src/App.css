@@ -40,7 +40,6 @@
   font-size: 20px;
 }
 
-
 /* Index.js */
 .post {
   opacity:0.5;
@@ -68,11 +67,32 @@ img {
 #delete {
   background-color: red;
   color: black;
+  margin-left: 10px;
 }
 
 .update {
   background-color: yellowgreen;
   color: white;
+}
+
+.updateForm input {
+  width: 70%;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.updateForm textarea {
+  width: 70%;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid;
+  border-radius: 5px;
+  resize: none;
+  height: 100px;
 }
 
 /* Add.js */
@@ -104,7 +124,7 @@ img {
   border-radius: 5px;
 }
 
-textarea {
+.container-new textarea {
   width: 100%;
   margin: 10px 0;
   padding: 10px;

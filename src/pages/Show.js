@@ -32,7 +32,7 @@ function Show(props) {
             <button id="delete" onClick={removePosting}>
                 DELETE
             </button>
-            <form onSubmit={handleSubmit}>
+            <form className="updateForm" onSubmit={handleSubmit}>
                 <input
                     type="text"
                     value={editForm.title}
@@ -54,7 +54,7 @@ function Show(props) {
                     placeholder="image"
                     onChange={handleChange}
                 />
-                <input
+                <textarea
                     type="text"
                     value={editForm.text}
                     name="text"
