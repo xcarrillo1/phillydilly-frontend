@@ -29,6 +29,7 @@ function Show(props) {
             By:<h2 className="author">{posting.author}</h2>
             <p>{posting.text}</p>
             <br/>
+            <h3>_____________________________________________</h3>
             <button id="delete" onClick={removePosting}>
                 DELETE
             </button>
