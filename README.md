@@ -1,4 +1,4 @@
-# PhillyDilly
+# PhillyDilly - Project 3
 
 This app allows users to create, read, update, and delete posts about the Philadelphia Eagles or Philly Cheeseteaks. Users input an image of the whatever they want, title, their name, and text for the post. Users can also click on "About" to see what the website is about and its origins.
 
