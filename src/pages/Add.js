@@ -29,31 +29,31 @@ function Add(props) {
                     type="text"
                     value={newForm.title}
                     name="title"
-                    placeholder="title"
+                    placeholder="Title"
                     onChange={handleChange}
                 />
                 <input
                     type="text"
                     value={newForm.author}
                     name="author"
-                    placeholder="author"
+                    placeholder="Author"
                     onChange={handleChange}
                 />
                 <input
                     type="text"
                     value={newForm.image}
                     name="image"
-                    placeholder="image URL"
+                    placeholder="Image URL"
                     onChange={handleChange}
                 />
                 <input
                     type="text"
                     value={newForm.text}
                     name="text"
-                    placeholder="text"
+                    placeholder="Text"
                     onChange={handleChange}
                 />
-                <input type="submit" value="Create Post" />
+                <input className="create" type="submit" value="Create Post" />
             </form>
         </section>
     );

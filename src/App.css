@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Nunito:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 * {
   box-sizing: border-box;
   background-color: seagreen;
-  cursor: url("https://i.imgur.com/CEwB8ux.png"), auto;
 }
 
 .App {
@@ -14,7 +13,9 @@
 
 /* Header.js */
 .nav {
-  font-family: "Nunito", sans-serif;
+  font-family: "Black Ops One", sans-serif;
+  font-size: 40px;
+  margin-bottom: -25px;
 }
 
 .nav a {
@@ -35,6 +36,12 @@
 .sub a {
   text-decoration: none;
   color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+.sub a:hover {
+  background-color: blue;
 }
 
 /* Index.js */
@@ -68,6 +75,15 @@ img {
 
 .update {
   background-color: black;
+  color: white;
+}
+
+/* Add.js */
+.create {
+  background-color: black;
+  color: white;
+}
+::placeholder {
   color: white;
 }
 
