@@ -13,7 +13,7 @@ These screenshots show a quick sketch of what the app looks while the user navig
 ![PhillyDilly wireframe](images/WireFrame.png)
 
 ## Getting Started:
-[Click here]() to check the app out!
+[Click here](https://phillydilly.netlify.app/) to check the app out!
 
 ## Future Enhacements:
 Have user authentication.
